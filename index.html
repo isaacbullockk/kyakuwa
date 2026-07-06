@@ -137,9 +137,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(ellipse at 20% 50%, rgba(212, 168, 83, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(212, 168, 83, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+                linear-gradient(180deg, rgba(5, 5, 5, 0.7) 0%, rgba(10, 10, 10, 0.5) 50%, rgba(5, 5, 5, 0.8) 100%),
+                url('kyakuwa_banner_bg.png') center center / cover no-repeat;
         }
 
         .hero-content {
@@ -1633,11 +1632,12 @@
             <!-- Cellphone -->
             <div class="video-card reveal">
                 <div class="video-wrapper">
-                    <div class="video-placeholder">
-                        <i class="fab fa-youtube"></i>
-                        <h3>Cellphone</h3>
-                        <p>Kyakuwa Music — Official Video<br><br><em>To embed: Go to YouTube video → Share → Embed → Copy iframe code here</em></p>
-                    </div>
+                    <iframe 
+                        src="https://www.youtube.com/embed/lGwz0u_Awis" 
+                        title="Kyakuwa - Cellphone Official Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="video-info">
                     <h3>Cellphone</h3>
@@ -1682,25 +1682,25 @@
         </div>
         <div class="instagram-grid">
             <div class="instagram-embed reveal">
-                <div class="instagram-placeholder">
-                    <i class="fab fa-instagram"></i>
-                    <h3>Instagram Post 1</h3>
-                    <p>Replace this with an Instagram embed code.<br>Go to instagram.com/kyakuwamusic → find a post → click ⋮ → Embed → Copy code here.</p>
-                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CV0wr9rormQ/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;">
+                        <a href="https://www.instagram.com/p/CV0wr9rormQ/" target="_blank" style="color:#000; text-decoration:none;">View this post on Instagram</a>
+                    </div>
+                </blockquote>
             </div>
             <div class="instagram-embed reveal">
-                <div class="instagram-placeholder">
-                    <i class="fab fa-instagram"></i>
-                    <h3>Instagram Post 2</h3>
-                    <p>Replace this with an Instagram embed code.<br>Go to instagram.com/kyakuwamusic → find a post → click ⋮ → Embed → Copy code here.</p>
-                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cg11xphISUb/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;">
+                        <a href="https://www.instagram.com/p/Cg11xphISUb/" target="_blank" style="color:#000; text-decoration:none;">View this post on Instagram</a>
+                    </div>
+                </blockquote>
             </div>
             <div class="instagram-embed reveal">
-                <div class="instagram-placeholder">
-                    <i class="fab fa-instagram"></i>
-                    <h3>Instagram Post 3</h3>
-                    <p>Replace this with an Instagram embed code.<br>Go to instagram.com/kyakuwamusic → find a post → click ⋮ → Embed → Copy code here.</p>
-                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYUpSmBMK0v/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;">
+                        <a href="https://www.instagram.com/p/DYUpSmBMK0v/" target="_blank" style="color:#000; text-decoration:none;">View this post on Instagram</a>
+                    </div>
+                </blockquote>
             </div>
         </div>
         <div style="text-align: center; margin-top: 40px;">
@@ -1794,35 +1794,51 @@
         <div class="section-header reveal">
             <p class="section-label">Moments</p>
             <h2 class="section-title">On Stage & Beyond</h2>
-            <p class="section-subtitle">Capturing the energy, the crowd, and the magic of live performance.</p>
+            <p class="section-subtitle">Real moments, real energy, real music. From beach sessions to packed venues.</p>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item reveal" onclick="openLightbox('https://kimi-web-img.moonshot.cn/img/i.scdn.co/dede2a37f4aff3f0ba0b9de71b063d40b64b1a81')">
-                <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/dede2a37f4aff3f0ba0b9de71b063d40b64b1a81" alt="Mary Jane Album Art">
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_beach_guitar.jpg')">
+                <img src="kyakuwa_beach_guitar.jpg" alt="Beach Guitar Session">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
-            <div class="gallery-item reveal" onclick="openLightbox('https://kimi-web-img.moonshot.cn/img/i.scdn.co/9233ecd991addf3f2cbfb9576ee6d96b4cd90fb2')">
-                <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/9233ecd991addf3f2cbfb9576ee6d96b4cd90fb2" alt="Sapatu Album Art">
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_acoustic_live.jpg')">
+                <img src="kyakuwa_acoustic_live.jpg" alt="Acoustic Live Performance">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
-            <div class="gallery-item reveal" onclick="openLightbox('https://kimi-web-img.moonshot.cn/img/i.scdn.co/da26bab7aefdf663a702cee8aea2a16cf2d5d9f0')">
-                <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/da26bab7aefdf663a702cee8aea2a16cf2d5d9f0" alt="F.E.A.R. Album Art">
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_wildnoff_stage.jpg')">
+                <img src="kyakuwa_wildnoff_stage.jpg" alt="Wildnoff Stage Performance">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
-            <div class="gallery-item reveal" onclick="openLightbox('https://kimi-web-img.moonshot.cn/img/i.scdn.co/71ae5acd4b042dc0cb6b18c03aef98cb29f29b9b')">
-                <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/71ae5acd4b042dc0cb6b18c03aef98cb29f29b9b" alt="Atelophobia Album Art">
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_crew_shot.jpg')">
+                <img src="kyakuwa_crew_shot.jpg" alt="Crew Shot">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
-            <div class="gallery-item reveal" onclick="openLightbox('https://kimi-web-img.moonshot.cn/img/i.scdn.co/e2bdf3e95f2371ced3e1d4e33460edc1aa308678')">
-                <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/e2bdf3e95f2371ced3e1d4e33460edc1aa308678" alt="Ubuntu Album Art">
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_bar_night.jpg')">
+                <img src="kyakuwa_bar_night.jpg" alt="Bar Night">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
-            <div class="gallery-item reveal" onclick="openLightbox('https://kimi-web-img.moonshot.cn/img/i.scdn.co/f51b60b374363f76d7809e3b87ab2384321c1cc1')">
-                <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/f51b60b374363f76d7809e3b87ab2384321c1cc1" alt="Hangover Album Art">
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_band_overhead.jpg')">
+                <img src="kyakuwa_band_overhead.jpg" alt="Band Overhead View">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_crowd_dancing.jpg')">
+                <img src="kyakuwa_crowd_dancing.jpg" alt="Crowd Dancing">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_hat_mic.jpg')">
+                <img src="kyakuwa_hat_mic.jpg" alt="Hat & Mic Performance">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_vivid_sessions.jpg')">
+                <img src="kyakuwa_vivid_sessions.jpg" alt="Vivid Sessions">
+                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_artist_portrait.jpg')">
+                <img src="kyakuwa_artist_portrait.jpg" alt="Kyakuwa Portrait">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_live_performance.jpg')">
-                <img src="kyakuwa_live_performance.jpg" alt="Live Performance - P60">
+                <img src="kyakuwa_live_performance.jpg" alt="Live at P60">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_group_shot.jpg')">
@@ -1834,7 +1850,7 @@
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox('kyakuwa_motorcycle_shot.jpg')">
-                <img src="kyakuwa_motorcycle_shot.jpg" alt="Kyakuwa - Motorcycle Style">
+                <img src="kyakuwa_motorcycle_shot.jpg" alt="Motorcycle Style">
                 <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
         </div>
@@ -1998,6 +2014,7 @@
         <img src="" alt="Lightbox Image" id="lightboxImg">
     </div>
 
+    <script async src="//www.instagram.com/embed.js"></script>
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {

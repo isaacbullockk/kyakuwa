@@ -1184,18 +1184,18 @@
             transform: translateY(0);
         }
 
-        /* Music Player Bar */
+        /* Music Player Bar (Spotify embed) */
         .player-bar {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: var(--dark-card);
-            border-top: 1px solid rgba(212, 168, 83, 0.1);
-            padding: 15px 40px;
+            background: var(--darker);
+            border-top: 1px solid rgba(212, 168, 83, 0.2);
+            padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 15px;
             z-index: 999;
             transform: translateY(100%);
             transition: transform 0.3s ease;
@@ -1205,93 +1205,32 @@
             transform: translateY(0);
         }
 
-        .player-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        .player-embed {
+            flex: 1;
+            min-width: 0;
         }
 
-        .player-cover {
-            width: 50px;
-            height: 50px;
-            border-radius: 8px;
-            object-fit: cover;
+        .player-embed iframe {
+            width: 100%;
+            height: 80px;
+            border: none;
+            border-radius: 12px;
+            display: block;
         }
 
-        .player-text h4 {
-            font-size: 0.9rem;
-        }
-
-        .player-text p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .player-controls {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .player-controls button {
+        .player-close {
             background: none;
             border: none;
-            color: var(--text-secondary);
-            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-size: 1.3rem;
             cursor: pointer;
+            padding: 10px;
+            flex-shrink: 0;
             transition: color 0.3s ease;
         }
 
-        .player-controls button:hover {
+        .player-close:hover {
             color: var(--gold);
-        }
-
-        .player-controls .play-pause {
-            width: 45px;
-            height: 45px;
-            background: var(--gold);
-            color: var(--dark);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .player-progress {
-            flex: 1;
-            max-width: 400px;
-            height: 4px;
-            background: var(--dark-surface);
-            border-radius: 2px;
-            margin: 0 20px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .player-progress-bar {
-            height: 100%;
-            background: var(--gold);
-            border-radius: 2px;
-            width: 30%;
-            position: relative;
-        }
-
-        .player-progress-bar::after {
-            content: '';
-            position: absolute;
-            right: -6px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            background: var(--gold);
-            border-radius: 50%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .player-progress:hover .player-progress-bar::after {
-            opacity: 1;
         }
 
         /* Lightbox */
@@ -1422,12 +1361,167 @@
             <p class="section-subtitle">Real music, real connections. Every track is a piece of the journey from Uganda to Amsterdam.</p>
         </div>
         <div class="releases-grid">
+            <!-- late night therapy -->
+            <div class="release-card reveal">
+                <div class="release-cover">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2732525291728db77e05d33fc20" alt="late night therapy - Kyakuwa" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <div class="play-overlay">
+                        <button class="play-btn" onclick="playTrack('late night therapy')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="release-info">
+                    <h3 class="release-title">late night therapy</h3>
+                    <div class="release-meta">
+                        <span class="release-year">2026</span>
+                        <span class="release-type">Single</span>
+                    </div>
+                    <p class="release-streams"><i class="fab fa-spotify"></i> New Release</p>
+                    <div class="stream-links">
+                        <a href="https://open.spotify.com/album/7cfRxdxCgSyoDTjqLSGzZP" target="_blank" class="stream-link">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/6797646372" target="_blank" class="stream-link">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                        <a href="https://unitedmasters.com/a/kyakuwa" target="_blank" class="stream-link">
+                            <i class="fas fa-music"></i> More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Just Perfume -->
+            <div class="release-card reveal">
+                <div class="release-cover">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273f2ce7f75ab88ec0536810fe2" alt="Just Perfume - Kyakuwa" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <div class="play-overlay">
+                        <button class="play-btn" onclick="playTrack('Just Perfume')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="release-info">
+                    <h3 class="release-title">Just Perfume</h3>
+                    <div class="release-meta">
+                        <span class="release-year">2026</span>
+                        <span class="release-type">Single</span>
+                    </div>
+                    <p class="release-streams"><i class="fab fa-spotify"></i> New Release</p>
+                    <div class="stream-links">
+                        <a href="https://open.spotify.com/album/5zDSXPIdem0RVksBofzwRQ" target="_blank" class="stream-link">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/6796742651" target="_blank" class="stream-link">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                        <a href="https://unitedmasters.com/a/kyakuwa" target="_blank" class="stream-link">
+                            <i class="fas fa-music"></i> More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Onumya -->
+            <div class="release-card reveal">
+                <div class="release-cover">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27380d95240dbd0f1719d0fa211" alt="Onumya - Kyakuwa" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <div class="play-overlay">
+                        <button class="play-btn" onclick="playTrack('Onumya')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="release-info">
+                    <h3 class="release-title">Onumya</h3>
+                    <div class="release-meta">
+                        <span class="release-year">2026</span>
+                        <span class="release-type">Single</span>
+                    </div>
+                    <p class="release-streams"><i class="fab fa-spotify"></i> New Release</p>
+                    <div class="stream-links">
+                        <a href="https://open.spotify.com/album/4YiE7v306KhFOniDwUl1BQ" target="_blank" class="stream-link">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/6786002981" target="_blank" class="stream-link">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                        <a href="https://unitedmasters.com/a/kyakuwa" target="_blank" class="stream-link">
+                            <i class="fas fa-music"></i> More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Silk and Fire -->
+            <div class="release-card reveal">
+                <div class="release-cover">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27377b7707e04b77b5aa3d936a9" alt="Silk and Fire - Kyakuwa" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <div class="play-overlay">
+                        <button class="play-btn" onclick="playTrack('Silk and Fire')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="release-info">
+                    <h3 class="release-title">Silk and Fire</h3>
+                    <div class="release-meta">
+                        <span class="release-year">2026</span>
+                        <span class="release-type">Single</span>
+                    </div>
+                    <p class="release-streams"><i class="fab fa-spotify"></i> New Release</p>
+                    <div class="stream-links">
+                        <a href="https://open.spotify.com/album/1CmE5PyfmJ8AbJhE4cnf1a" target="_blank" class="stream-link">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/6786485151" target="_blank" class="stream-link">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                        <a href="https://unitedmasters.com/a/kyakuwa" target="_blank" class="stream-link">
+                            <i class="fas fa-music"></i> More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Path or Walker -->
+            <div class="release-card reveal">
+                <div class="release-cover">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27316b53cae42c79906c9f32185" alt="Path or Walker - Kyakuwa" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <div class="play-overlay">
+                        <button class="play-btn" onclick="playTrack('Path or Walker')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="release-info">
+                    <h3 class="release-title">Path or Walker</h3>
+                    <div class="release-meta">
+                        <span class="release-year">2026</span>
+                        <span class="release-type">Single</span>
+                    </div>
+                    <p class="release-streams"><i class="fab fa-spotify"></i> New Release</p>
+                    <div class="stream-links">
+                        <a href="https://open.spotify.com/album/74Y5pB2jmjYw5eF6m2g3WR" target="_blank" class="stream-link">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/6784316293" target="_blank" class="stream-link">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                        <a href="https://unitedmasters.com/a/kyakuwa" target="_blank" class="stream-link">
+                            <i class="fas fa-music"></i> More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Mary Jane -->
             <div class="release-card reveal">
                 <div class="release-cover">
-                    <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/dede2a37f4aff3f0ba0b9de71b063d40b64b1a81" alt="Mary Jane - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273e664b1a023e3bdeed61faade" alt="Mary Jane - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
                     <div class="play-overlay">
-                        <button class="play-btn" onclick="playTrack('Mary Jane', 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/dede2a37f4aff3f0ba0b9de71b063d40b64b1a81')">
+                        <button class="play-btn" onclick="playTrack('Mary Jane')">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -1456,9 +1550,9 @@
             <!-- Persevere -->
             <div class="release-card reveal">
                 <div class="release-cover">
-                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=400&fit=crop" alt="Persevere - Kyakuwa" onerror="this.src='https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=400&fit=crop'">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2736ec8fa90761a94831ad21326" alt="Persevere - Kyakuwa" onerror="this.src='https://i.scdn.co/image/ab67616d0000b2736ec8fa90761a94831ad21326'">
                     <div class="play-overlay">
-                        <button class="play-btn" onclick="playTrack('Persevere', 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=400&fit=crop')">
+                        <button class="play-btn" onclick="playTrack('Persevere')">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -1487,9 +1581,9 @@
             <!-- Ubuntu -->
             <div class="release-card reveal">
                 <div class="release-cover">
-                    <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/e2bdf3e95f2371ced3e1d4e33460edc1aa308678" alt="Ubuntu - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop'">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27398b2e92b09cd06c1aa715fa4" alt="Ubuntu - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop'">
                     <div class="play-overlay">
-                        <button class="play-btn" onclick="playTrack('Ubuntu', 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/e2bdf3e95f2371ced3e1d4e33460edc1aa308678')">
+                        <button class="play-btn" onclick="playTrack('Ubuntu')">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -1498,7 +1592,7 @@
                     <h3 class="release-title">Ubuntu</h3>
                     <div class="release-meta">
                         <span class="release-year">2023</span>
-                        <span class="release-type">Album</span>
+                        <span class="release-type">Single</span>
                     </div>
                     <p class="release-streams"><i class="fab fa-spotify"></i> Available Now</p>
                     <div class="stream-links">
@@ -1518,9 +1612,9 @@
             <!-- Sapatu -->
             <div class="release-card reveal">
                 <div class="release-cover">
-                    <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/9233ecd991addf3f2cbfb9576ee6d96b4cd90fb2" alt="Sapatu - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2730c377cdee3be54574f2db0c0" alt="Sapatu - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
                     <div class="play-overlay">
-                        <button class="play-btn" onclick="playTrack('Sapatu', 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/9233ecd991addf3f2cbfb9576ee6d96b4cd90fb2')">
+                        <button class="play-btn" onclick="playTrack('Sapatu')">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -1528,7 +1622,7 @@
                 <div class="release-info">
                     <h3 class="release-title">Sapatu</h3>
                     <div class="release-meta">
-                        <span class="release-year">2023</span>
+                        <span class="release-year">2022</span>
                         <span class="release-type">Single</span>
                     </div>
                     <p class="release-streams"><i class="fab fa-spotify"></i> Available Now</p>
@@ -1549,9 +1643,9 @@
             <!-- F.E.A.R. -->
             <div class="release-card reveal">
                 <div class="release-cover">
-                    <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/da26bab7aefdf663a702cee8aea2a16cf2d5d9f0" alt="F.E.A.R. - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27369de9dccef84e846fdccf2ac" alt="F.E.A.R. - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
                     <div class="play-overlay">
-                        <button class="play-btn" onclick="playTrack('F.E.A.R.', 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/da26bab7aefdf663a702cee8aea2a16cf2d5d9f0')">
+                        <button class="play-btn" onclick="playTrack('F.E.A.R.')">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -1559,7 +1653,7 @@
                 <div class="release-info">
                     <h3 class="release-title">F.E.A.R.</h3>
                     <div class="release-meta">
-                        <span class="release-year">2023</span>
+                        <span class="release-year">2021</span>
                         <span class="release-type">Single</span>
                     </div>
                     <p class="release-streams"><i class="fab fa-spotify"></i> Available Now</p>
@@ -1580,9 +1674,9 @@
             <!-- Atelophobia -->
             <div class="release-card reveal">
                 <div class="release-cover">
-                    <img src="https://kimi-web-img.moonshot.cn/img/i.scdn.co/71ae5acd4b042dc0cb6b18c03aef98cb29f29b9b" alt="Atelophobia - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273b3add55576d9e829ead35d6b" alt="Atelophobia - Kyakuwa x DJ NLZ" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop'">
                     <div class="play-overlay">
-                        <button class="play-btn" onclick="playTrack('Atelophobia', 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/71ae5acd4b042dc0cb6b18c03aef98cb29f29b9b')">
+                        <button class="play-btn" onclick="playTrack('Atelophobia')">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -1590,7 +1684,7 @@
                 <div class="release-info">
                     <h3 class="release-title">Atelophobia</h3>
                     <div class="release-meta">
-                        <span class="release-year">2023</span>
+                        <span class="release-year">2021</span>
                         <span class="release-type">Single</span>
                     </div>
                     <p class="release-streams"><i class="fab fa-spotify"></i> Available Now</p>
@@ -1893,7 +1987,7 @@
                     <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <div class="contact-details">
                         <h4>Email</h4>
-                        <a href="mailto:info@isaacbullock.nl">info@isaacbullock.nl</a>
+                        <a href="mailto:info@isaacbullock.com">info@isaacbullock.com</a>
                     </div>
                 </div>
 
@@ -1948,9 +2042,10 @@
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" placeholder="Tell us about your event..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
+                    <p id="formStatus" style="margin-top: 15px; font-size: 0.9rem; text-align: center; min-height: 1.2em;"></p>
                 </form>
             </div>
         </div>
@@ -2008,24 +2103,10 @@
         </div>
     </footer>
 
-    <!-- Music Player Bar -->
+    <!-- Music Player Bar (real Spotify playback) -->
     <div class="player-bar" id="playerBar">
-        <div class="player-info">
-            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop" alt="Cover" class="player-cover" id="playerCover">
-            <div class="player-text">
-                <h4 id="playerTitle">Select a track</h4>
-                <p id="playerArtist">Kyakuwa</p>
-            </div>
-        </div>
-        <div class="player-controls">
-            <button onclick="prevTrack()" aria-label="Previous track"><i class="fas fa-step-backward"></i></button>
-            <button class="play-pause" onclick="togglePlay()" id="playPauseBtn" aria-label="Play or pause"><i class="fas fa-play"></i></button>
-            <button onclick="nextTrack()" aria-label="Next track"><i class="fas fa-step-forward"></i></button>
-        </div>
-        <div class="player-progress">
-            <div class="player-progress-bar" id="progressBar"></div>
-        </div>
-        <button onclick="closePlayer()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;"><i class="fas fa-times"></i></button>
+        <div class="player-embed" id="playerEmbed"></div>
+        <button class="player-close" onclick="closePlayer()" aria-label="Close player"><i class="fas fa-times"></i></button>
     </div>
 
     <!-- Lightbox -->
@@ -2091,80 +2172,47 @@
             particlesContainer.appendChild(particle);
         }
 
-        // Music Player
+        // Music Player — real playback via Spotify embeds
         const playlist = [
-            { title: 'Mary Jane', cover: 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/dede2a37f4aff3f0ba0b9de71b063d40b64b1a81' },
-            { title: 'Persevere', cover: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=400&fit=crop' },
-            { title: 'Ubuntu', cover: 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/e2bdf3e95f2371ced3e1d4e33460edc1aa308678' },
-            { title: 'Sapatu', cover: 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/9233ecd991addf3f2cbfb9576ee6d96b4cd90fb2' },
-            { title: 'F.E.A.R.', cover: 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/da26bab7aefdf663a702cee8aea2a16cf2d5d9f0' },
-            { title: 'Atelophobia', cover: 'https://kimi-web-img.moonshot.cn/img/i.scdn.co/71ae5acd4b042dc0cb6b18c03aef98cb29f29b9b' }
+            { title: 'late night therapy', type: 'track', id: '13XSEnp8OiqTZe3zCKL2yJ' },
+            { title: 'Just Perfume', type: 'track', id: '3Jo5XgJjg84wF8y0kknxzx' },
+            { title: 'Onumya', type: 'track', id: '3jupMlhePerH6BK0NNpE1U' },
+            { title: 'Silk and Fire', type: 'track', id: '4gVBzrC82zgIaAm9KCtp6v' },
+            { title: 'Path or Walker', type: 'track', id: '1B7C52agqQ9MaV4jlhEnky' },
+            { title: 'Mary Jane', type: 'track', id: '4NIgkenKSpnjUutdDMjsqJ' },
+            { title: 'Persevere', type: 'track', id: '3JXMt5dSlLs0XEcfAZmofh' },
+            { title: 'Ubuntu', type: 'album', id: '7izXuXMoTr7wXcId2pYX76' },
+            { title: 'Sapatu', type: 'track', id: '5qDzozSHZq0cN2K5RiQubm' },
+            { title: 'F.E.A.R.', type: 'track', id: '1RFJ2J7t4bxstvkdeyPTlj' },
+            { title: 'Atelophobia', type: 'track', id: '0UsVVMZEg5pXpIaqbueaEf' }
         ];
-        let isPlaying = false;
         let currentTrackIndex = -1;
-        let progressValue = 0;
-        let progressInterval = null;
 
-        function playTrack(track, coverUrl) {
-            const idx = playlist.findIndex(t => t.title === track);
-            if (idx >= 0) currentTrackIndex = idx;
-            document.getElementById('playerTitle').textContent = track;
-            document.getElementById('playerCover').src = coverUrl;
+        function playTrack(title) {
+            const idx = playlist.findIndex(t => t.title === title);
+            if (idx < 0) return;
+            currentTrackIndex = idx;
+            const t = playlist[idx];
+            document.getElementById('playerEmbed').innerHTML =
+                '<iframe src="https://open.spotify.com/embed/' + t.type + '/' + t.id +
+                '?utm_source=generator&theme=0" title="' + t.title +
+                ' — Spotify player" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
             document.getElementById('playerBar').classList.add('active');
-            isPlaying = true;
-            updatePlayButton();
-            startProgress();
-        }
-
-        function startProgress() {
-            // Clear any existing interval so switching tracks never stacks timers
-            if (progressInterval) {
-                clearInterval(progressInterval);
-                progressInterval = null;
-            }
-            progressValue = 0;
-            const progressBar = document.getElementById('progressBar');
-            progressBar.style.width = '0%';
-            progressInterval = setInterval(() => {
-                if (!isPlaying) return;
-                progressValue += 0.5;
-                if (progressValue > 100) progressValue = 0;
-                progressBar.style.width = progressValue + '%';
-            }, 1000);
         }
 
         function nextTrack() {
             if (currentTrackIndex < 0) return;
-            const next = playlist[(currentTrackIndex + 1) % playlist.length];
-            playTrack(next.title, next.cover);
+            playTrack(playlist[(currentTrackIndex + 1) % playlist.length].title);
         }
 
         function prevTrack() {
             if (currentTrackIndex < 0) return;
-            const prev = playlist[(currentTrackIndex - 1 + playlist.length) % playlist.length];
-            playTrack(prev.title, prev.cover);
-        }
-
-        function togglePlay() {
-            isPlaying = !isPlaying;
-            updatePlayButton();
-        }
-
-        function updatePlayButton() {
-            const btn = document.getElementById('playPauseBtn');
-            btn.innerHTML = isPlaying ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
+            playTrack(playlist[(currentTrackIndex - 1 + playlist.length) % playlist.length].title);
         }
 
         function closePlayer() {
             document.getElementById('playerBar').classList.remove('active');
-            isPlaying = false;
-            if (progressInterval) {
-                clearInterval(progressInterval);
-                progressInterval = null;
-            }
-            progressValue = 0;
-            document.getElementById('progressBar').style.width = '0%';
-            updatePlayButton();
+            document.getElementById('playerEmbed').innerHTML = '';
         }
 
         // Lightbox
@@ -2182,11 +2230,36 @@
             if (e.key === 'Escape') closeLightbox();
         });
 
-        // Form submission
-        function handleSubmit(e) {
+        // Form submission — delivers to info@isaacbullock.com via FormSubmit
+        async function handleSubmit(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            document.getElementById('contactForm').reset();
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('formStatus');
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            status.style.color = 'var(--text-secondary)';
+            status.textContent = 'Sending...';
+            try {
+                const res = await fetch('https://formsubmit.co/ajax/info@isaacbullock.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        _subject: 'New booking inquiry from kyakuwa.com',
+                        name: form.name.value,
+                        email: form.email.value,
+                        'event type': form.event.value,
+                        message: form.message.value
+                    })
+                });
+                if (!res.ok) throw new Error('Send failed');
+                status.style.color = 'var(--accent-green)';
+                status.textContent = 'Thank you! Your message has been sent — we will get back to you soon.';
+                form.reset();
+            } catch (err) {
+                status.style.color = 'var(--accent-red)';
+                status.innerHTML = 'Something went wrong. Please email us directly at <a href="mailto:info@isaacbullock.com" style="color: var(--gold);">info@isaacbullock.com</a>.';
+            }
+            btn.disabled = false;
         }
 
         // Mobile menu

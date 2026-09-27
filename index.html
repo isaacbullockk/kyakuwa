@@ -1269,6 +1269,73 @@
             font-size: 2rem;
             cursor: pointer;
         }
+        /* News Banner */
+        .news-banner {
+            background: var(--gradient-gold);
+            color: var(--darker);
+            padding: 60px 5%;
+        }
+        .news-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .news-inner i.fa-trophy {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+        .news-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .news-label {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+        .news-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.05;
+            margin-bottom: 12px;
+        }
+        .news-body {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 640px;
+        }
+        .news-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--darker);
+            color: var(--gold-light);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+        @media (max-width: 768px) {
+            .news-title { font-size: 1.5rem; }
+            .news-banner { padding: 45px 5%; }
+        }
+
     </style>
 </head>
 <body>
@@ -1310,6 +1377,21 @@
                     <i class="fab fa-youtube"></i> YouTube
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- News Banner: Hard Rock Rising -->
+    <section class="news-banner" id="news">
+        <div class="news-inner">
+            <i class="fas fa-trophy"></i>
+            <div class="news-text">
+                <p class="news-label">Latest</p>
+                <h2 class="news-title">Runner-up, Hard Rock Rising 2026</h2>
+                <p class="news-body">Kyakuwa finished second in the Dutch national final of Hard Rock Rising at Hard Rock Cafe Amsterdam, out of 70 competing acts. We brought Afro-soul to a room expecting hard rock and pop, and the audience put us in second place. It is only a song if you can nail it live.</p>
+            </div>
+            <a href="https://youtu.be/F_Gj7BdfB6M" target="_blank" class="news-cta">
+                <i class="fas fa-play"></i> Watch the final
+            </a>
         </div>
     </section>
 
